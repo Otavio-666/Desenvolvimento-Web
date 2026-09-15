@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Exemplo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <main>
+
+        <form action="/submit" method="POST">
+            
+            <h3>Cadastre-se</h3>
+
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Nome completo" required>
+            </div>
+
+            <div class="form-group">
+                <label for="data_nascimento">Data de Nascimento:</label>
+                <input type="date" id="data_nascimento" name="data_nascimento" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required>
+            </div>
+
+            <div class="form-group">
+                <label>Gênero:</label>
+
+                <label for="masculino">
+                    <input type="radio" id="masculino" name="genero" value="masculino">Masculino
+                </label>
+
+                <label for="feminino">
+                    <input type="radio" id="feminino" name="genero" value="feminino">Feminino
+                </label>
+
+                <label for="outro">
+                    <input type="radio" id="outro" name="genero" value="outro">Outro
+                </label>
+
+            </div>
+
+            <div class="form-group">
+                <label>Habilidades:</label>
+
+                <label for="html">
+                    <input type="checkbox" id="html" name="habilidades" value="HTML">HTML
+                </label>
+
+                <label for="css">
+                    <input type="checkbox" id="css" name="habilidades" value="CSS">CSS
+                </label>
+    
+                <label for="javascript">
+                    <input type="checkbox" id="javascript" name="habilidades" value="JavaScript">JavaScript
+                </label>
+    
+                <label for="php">
+                    <input type="checkbox" id="php" name="habilidades" value="PHP">PHP
+                </label>
+
+                <label for="python">
+                    <input type="checkbox" id="python" name="habilidades" value="Python">Python
+                </label>    
+                
+            </div>
+
+
+            <div class="form-group">
+                <label for="pais">País:</label>
+                <select id="pais" name="pais">
+                    <option value="br">Brasil</option>
+                    <option value="us">Estados Unidos</option>
+                    <option value="fr">França</option>
+                    <option value="de">Alemanha</option>
+                    <option value="jp">Japão</option>
+                    <option value="cn">China</option>
+
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="curriculo">Upload de Currículo:</label>
+                <input type="file" id="curriculo" name="curriculo" required>
+            </div>
+
+            <script src="https://cdn.jsdelivr.net/npm/tinymce@6/tinymce.min.js" referrerpolicy="origin"></script>
+            <script>
+    
+                tinymce.init({
+                    selector: '#comentarios', 
+                    plugins: 'lists link image code preview', 
+                    toolbar: 'undo redo | styles | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | preview',
+                    language: 'pt_BR', 
+                    menubar: false, 
+                    height: 300 
+                });
+
+            </script>
+
+            <div class="form-group">
+                <label for="comentarios">Comentários:</label><br>
+                <textarea id="comentarios" name="comentarios" rows="4" cols="50"></textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Enviar</button>
+            </div>
+
+        </form>
+
+    </main>
+</body>
+
+</html>

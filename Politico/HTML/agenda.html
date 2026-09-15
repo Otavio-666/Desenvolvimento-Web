@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ronronaldo 77</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .agenda-calendario {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+            background-color: rgba(255, 255, 255, 0.027);
+            backdrop-filter: blur(10px);
+            padding: 10px;
+            border-radius: 10px;
+            margin: 10vh 0;
+        }
+
+        .grid-linha {
+            display: contents;
+        }
+
+        .dia-semana {
+            font-weight: bold;
+            font-size: 18px;
+            text-shadow: 0 0 5px rgb(0, 0, 0);
+            text-align: center;
+            padding: 5px;
+            background-color: rgba(162, 255, 193, 0.384);
+            border-radius: 5px;
+        }
+
+        .dia {
+            background: linear-gradient(to bottom, rgba(255, 163, 163, 0.459), rgba(255, 255, 255, 0.11));
+            backdrop-filter: blur(10px);
+            border-radius: 5px;
+            padding: 5px;
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+        }
+
+        .dia.vazio {
+            visibility: hidden;
+        }
+
+        .numero-dia {
+            font-weight: bold;
+        }
+
+        .dia:hover>.detalhes {
+            width: 100%;
+            height: 80%;
+            font-size: 15px;
+            opacity: 1;
+            background: radial-gradient(circle, rgb(255, 152, 152)50%, rgba(255, 255, 255, 0));
+            transition: all 1s;
+        }
+
+        .detalhes {
+            width: 5%;
+            height: 8%;
+            background: rgb(255, 152, 152);
+            font-size: 1px;
+            text-align: center;
+            padding: 5px;
+            border-radius: 5px;
+            position: absolute;
+            opacity: 0;
+            transition: all 1s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .detalhes p {
+            text-shadow: 0 0 5px rgb(0, 0, 0);
+        }
+    </style>
+    <!-- tem que colocar a classe aqui nas div eu não coloquei nome em nenhuma classe, algumas possuem outras não então conferir-->
+</head>
+
+<body>
+
+    <header>
+        <!-- Aqui é o menu -->
+        <div class="logo">
+
+            <h1>Ronronaldo 77</h1>
+
+        </div>
+        <nav>
+
+            <a href="../index.html">Home</a>
+            <a href="historia.html">Historia</a>
+            <a href="propostas.html">Propostas</a>
+            <a href="agenda.html">Agenda</a>
+            <a href="musica.html">Musica</a>
+            <a href="album.html">Fotos</a>
+            <a href="contato.html">Contato</a>
+
+        </nav>
+    </header>
+
+    <div class="conteiner">
+        <!-- exemplo de como pode fcar a ficar a tabela, vo faze do meu jeito euem -->
+
+        <div class="agenda-calendario grid-coluna">
+
+            <!-- Cabeçalho -->
+            <div class="grid-linha cabecalho-agenda">
+                <div class="dia-semana">Domingo</div>
+                <div class="dia-semana">Segunda</div>
+                <div class="dia-semana">Terça</div>
+                <div class="dia-semana">Quarta</div>
+                <div class="dia-semana">Quinta</div>
+                <div class="dia-semana">Sexta</div>
+                <div class="dia-semana">Sábado</div>
+            </div>
+
+            <!-- Semana 1 -->
+            <div class="grid-linha">
+                <div class="dia vazio"></div>
+                <div class="dia vazio"></div>
+                <div class="dia vazio"></div>
+                <div class="dia vazio"></div>
+                <div class="dia vazio"></div>
+                <div class="dia vazio"></div>
+
+                <div class="dia">
+                    <div class="numero-dia">1</div>
+                    <div class="detalhes">
+                        <p>18:00</p>
+                        <p>Lançamento oficial da campanha na praça central.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Semana 2 -->
+            <div class="grid-linha">
+                <div class="dia">
+                    <div class="numero-dia">2</div>
+                    <div class="detalhes">
+                        <p>10:00</p>
+                        <p>Visita a escolas municipais.</p>
+                    </div>
+                </div>
+
+                <div class="dia">
+                    <div class="numero-dia">3</div>
+                    <div class="detalhes">
+                        <p>14:00</p>
+                        <p>Reunião com comerciantes locais.</p>
+                    </div>
+                </div>
+
+                <div class="dia">
+                    <div class="numero-dia">4</div>
+                    <div class="detalhes">
+                        <p>20:00</p>
+                        <p>Caminhada pelo centro da cidade.</p>
+                    </div>
+                </div>
+
+                <div class="dia">
+                    <div class="numero-dia">5</div>
+                    <div class="detalhes">
+                        <p>16:00</p>
+                        <p>Encontro com lideranças comunitárias.</p>
+                    </div>
+                </div>
+
+                <div class="dia">
+                    <div class="numero-dia">6</div>
+                    <div class="detalhes">
+                        <p>19:00</p>
+                        <p>Participação em evento esportivo.</p>
+                    </div>
+                </div>
+
+                <div class="dia">
+                    <div class="numero-dia">7</div>
+                    <div class="detalhes">
+                        <p>15:00</p>
+                        <p>Live para responder perguntas da população.</p>
+                    </div>
+                </div>
+
+                <div class="dia">
+                    <div class="numero-dia">8</div>
+                    <div class="detalhes">
+                        <p>17:00</p>
+                        <p>Visita ao hospital municipal.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Semana 3 -->
+            <div class="grid-linha">
+                <div class="dia">
+                    <div class="numero-dia">9</div>
+                    <div class="detalhes">
+                        <p>18:00</p>
+                        <p>Reunião sobre melhorias no transporte público.</p>
+                    </div>
+                </div>
+
+                <div class="dia">
+                    <div class="numero-dia">10</div>
+                    <div class="detalhes">
+                        <p>10:00</p>
+                        <p>Entrevista para rádio local.</p>
+                    </div>
+                </div>
+
+                <div class="dia">
+                    <div class="numero-dia">11</div>
+                    <div class="detalhes">
+                        <p>14:00</p>
+                        <p>Visita a bairros periféricos.</p>
+                    </div>
+                </div>
+
+                <div class="dia">
+                    <div class="numero-dia">12</div>
+                    <div class="detalhes">
+                        <p>20:00</p>
+                        <p>Debate com jovens estudantes.</p>
+                    </div>
+                </div>
+
+                <div class="dia">
+                    <div class="numero-dia">13</div>
+                    <div class="detalhes">
+                        <p>16:00</p>
+                        <p>Mutirão de limpeza em praça pública.</p>
+                    </div>
+                </div>
+
+                <div class="dia">
+                    <div class="numero-dia">14</div>
+                    <div class="detalhes">
+                        <p>19:00</p>
+                        <p>Encontro com agricultores da região.</p>
+                    </div>
+                </div>
+
+                <div class="dia">
+                    <div class="numero-dia">15</div>
+                    <div class="detalhes">
+                        <p>15:00</p>
+                        <p>Apresentação de propostas para a educação.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Semana 4 -->
+            <div class="grid-linha">
+                <div class="dia">
+                    <div class="numero-dia">16</div>
+                    <div class="detalhes">
+                        <p>17:00</p>
+                        <p>Caminhada em feira livre.</p>
+                    </div>
+                </div>
+
+                <div class="dia">
+                    <div class="numero-dia">17</div>
+                    <div class="detalhes">
+                        <p>18:00</p>
+                        <p>Reunião com profissionais da saúde.</p>
+                    </div>
+                </div>
+
+                <div class="dia">
+                    <div class="numero-dia">18</div>
+                    <div class="detalhes">
+                        <p>10:00</p>
+                        <p>Visita a projetos sociais.</p>
+                    </div>
+                </div>
+
+                <div class="dia">
+                    <div class="numero-dia">19</div>
+                    <div class="detalhes">
+                        <p>14:00</p>
+                        <p>Entrevista para jornal local.</p>
+                    </div>
+                </div>
+
+                <div class="dia">
+                    <div class="numero-dia">20</div>
+                    <div class="detalhes">
+                        <p>20:00</p>
+                        <p>Debate sobre segurança pública.</p>
+                    </div>
+                </div>
+
+                <div class="dia">
+                    <div class="numero-dia">21</div>
+                    <div class="detalhes">
+                        <p>16:00</p>
+                        <p>Encontro com associações de moradores.</p>
+                    </div>
+                </div>
+
+                <div class="dia">
+                    <div class="numero-dia">22</div>
+                    <div class="detalhes">
+                        <p>19:00</p>
+                        <p>Visita a empresas locais.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Semana 5 -->
+            <div class="grid-linha">
+                <div class="dia">
+                    <div class="numero-dia">23</div>
+                    <div class="detalhes">
+                        <p>15:00</p>
+                        <p>Apresentação de propostas ambientais.</p>
+                    </div>
+                </div>
+
+                <div class="dia">
+                    <div class="numero-dia">24</div>
+                    <div class="detalhes">
+                        <p>17:00</p>
+                        <p>Participação em evento cultural.</p>
+                    </div>
+                </div>
+
+                <div class="dia">
+                    <div class="numero-dia">25</div>
+                    <div class="detalhes">
+                        <p>18:00</p>
+                        <p>Reunião com professores.</p>
+                    </div>
+                </div>
+
+                <div class="dia">
+                    <div class="numero-dia">26</div>
+                    <div class="detalhes">
+                        <p>10:00</p>
+                        <p>Caminhada em bairros residenciais.</p>
+                    </div>
+                </div>
+
+                <div class="dia">
+                    <div class="numero-dia">27</div>
+                    <div class="detalhes">
+                        <p>14:00</p>
+                        <p>Debate público com moradores.</p>
+                    </div>
+                </div>
+
+                <div class="dia">
+                    <div class="numero-dia">28</div>
+                    <div class="detalhes">
+                        <p>20:00</p>
+                        <p>Live sobre prestação de contas da campanha.</p>
+                    </div>
+                </div>
+
+                <div class="dia">
+                    <div class="numero-dia">29</div>
+                    <div class="detalhes">
+                        <p>16:00</p>
+                        <p>Grande carreata pela cidade.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Semana 6 -->
+            <div class="grid-linha">
+                <div class="dia">
+                    <div class="numero-dia">30</div>
+                    <div class="detalhes">
+                        <p>19:00</p>
+                        <p>Comício de encerramento da campanha.</p>
+                    </div>
+                </div>
+
+                <div class="dia vazio"></div>
+                <div class="dia vazio"></div>
+                <div class="dia vazio"></div>
+                <div class="dia vazio"></div>
+                <div class="dia vazio"></div>
+                <div class="dia vazio"></div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

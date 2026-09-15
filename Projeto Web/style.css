@@ -1,0 +1,202 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@300;500&display=swap');
+
+:root {
+    --primary: #d63384;
+    --secondary: #ff85a1;
+    --paper: #fff9ec;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+
+.star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.5;
+    animation: twinkle var(--duration) infinite ease-in-out;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.2); }
+}
+
+
+.envelope-wrapper {
+    position: relative;
+    width: 350px;
+    height: 250px;
+    cursor: pointer;
+}
+
+.envelope {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    z-index: 10;
+}
+
+.envelope-inside {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #b02a6b;
+    z-index: 1;
+    border-radius: 0 0 15px 15px;
+}
+
+
+.envelope::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    z-index: 30; 
+    border-top: 150px solid #e83e8c;
+    border-left: 175px solid transparent;
+    border-right: 175px solid transparent;
+    transform-origin: top;
+    transition: transform 0.6s ease-in-out, z-index 0.1s 0.3s;
+}
+
+
+.envelope::after {
+    content: "";
+    position: absolute;
+    z-index: 25; 
+    width: 0;
+    height: 0;
+    border-top: 130px solid transparent;
+    border-right: 175px solid var(--secondary);
+    border-bottom: 120px solid var(--secondary);
+    border-left: 175px solid #ff758f;
+    border-radius: 0 0 15px 15px;
+}
+
+.letter {
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+    width: 330px;
+    height: 230px;
+    background: var(--paper);
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 5; 
+    transition: transform 0.8s ease-in-out, z-index 0.1s 0.4s, height 0.5s 0.5s;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.letter-content {
+    border: 1px solid #f0e4d7;
+    height: 90%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.letter h2 {
+    font-family: 'Dancing Script', cursive;
+    color: var(--primary);
+    margin: 0;
+    text-align: center;
+}
+
+.letter p {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.5;
+    margin-top: 10px;
+    flex-grow: 1;
+}
+
+.signature {
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+    color: var(--primary);
+    text-align: right;
+    opacity: 0;
+    transition: opacity 1s 1s;
+}
+
+
+.open .envelope::before {
+    z-index: 5; 
+    transform: rotateX(180deg);
+}
+
+.open .letter {
+    transform: translateY(-50px); 
+    z-index: 50; 
+    height: 280px;
+}
+
+.open .signature {
+    opacity: 1;
+}
+
+
+.heart-seal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    background: #ff0054;
+    z-index: 40;
+    transform: translate(-50%, -10%) rotate(-45deg);
+    transition: 0.5s;
+}
+.heart-seal::before, .heart-seal::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #ff0054;
+    border-radius: 50%;
+}
+.heart-seal::before { top: -25px; left: 0; }
+.heart-seal::after { left: 25px; top: 0; }
+
+.open .heart-seal {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.pulse-ring {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #ff0054;
+    border-radius: 50%;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(2.5); opacity: 0; }
+}
+
+.instruction {
+    position: absolute;
+    bottom: -80px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}

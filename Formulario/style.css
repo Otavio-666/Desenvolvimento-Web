@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+/* adiciona o CSS para uma fonte personalizada  */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    background: url(market.webp) no-repeat center center fixed;
+    /* adiciona uma imagem de fundo para a página  */
+    background-size: cover;
+
+    margin: 0;
+    padding: 0;
+}
+
+h3 {
+    font-size: 25px;
+    font-weight: normal;
+}
+
+form {
+    width: 500px;
+    height: 138vh;
+    float: right;
+    /* desloca o formulário para a direita da página  */
+    background-color: #ffffff;
+    padding: 25px 50px 25px 50px;
+}
+
+form .form-group {
+    margin-top: 15px;
+}
+
+/* Cria um estilo para os labels, menos os que tiverem a propriedade "for" com os valores abaixo */
+label:not([for="html"], [for="css"], [for="javascript"], [for="php"]) {
+    display: block;
+    margin-bottom: 8px;
+}
+
+[for="html"], [for="css"], [for="javascript"], [for="php"] {
+    margin-right: 25px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="file"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color:#e5633f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* informa que o estilo do botão será alterado quando houver um evento de mouse sobre ele */
+button:hover {
+    background-color: #4285f4;
+}
